@@ -1,2 +1,4 @@
-1. noga
-2. glowa
+1. Rafal
+2. Dominik
+3. Glowa
+4. Noga
