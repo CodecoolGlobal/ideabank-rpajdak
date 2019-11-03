@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-1. dupa
-2. glowa
-3. clear
-=======
-
->>>>>>> ce5d6623abd69727d88cec9482765a58fdcc4296
+1. Madzia
+2. Ciapa
+3. RAfcio
+4. Rodzinka

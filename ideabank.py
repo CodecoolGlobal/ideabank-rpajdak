@@ -1,8 +1,18 @@
 # Put your code here
 import sys
-arg = sys.argv
+data = sys.argv[1:]
+data = str(data)[1:][:-1]
+arg = data
 
 ideas = []
+
+
+
+def display_ideas():
+    file = open("ideas.txt", "r")
+    content =file.read()
+    print(content)
+    file.close()
 
 def idea_bank():
     i = 0
@@ -20,6 +30,9 @@ def idea_bank():
         file = open("ideas.txt", "w")
         file.write(ideas_to_file)
         file.close()
-        print(type(ideas))
         print(ideas_to_file)
-idea_bank()
+
+if arg == "'--list'":
+    display_ideas()
+else:
+    idea_bank()
