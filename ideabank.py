@@ -1,4 +1,7 @@
 # Put your code here
+import sys
+arg = sys.argv
+
 ideas = []
 
 def idea_bank():
@@ -17,5 +20,6 @@ def idea_bank():
         file = open("ideas.txt", "w")
         file.write(ideas_to_file)
         file.close()
+        print(type(ideas))
         print(ideas_to_file)
 idea_bank()

@@ -1,2 +1,3 @@
-1. noga
+1. dupa
 2. glowa
+3. clear
