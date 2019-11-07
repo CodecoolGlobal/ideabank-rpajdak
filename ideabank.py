@@ -3,6 +3,8 @@ data = sys.argv[1:]
 data = str(data)[1:][:-1]
 arg = data
 ideas = []
+numer= sys.argv
+print(numer[2])
 def display_ideas():
     file = open("ideas.txt", "r")
     content =file.read()
