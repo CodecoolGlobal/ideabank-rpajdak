@@ -26,16 +26,24 @@ def idea_bank():
         file.close()
         print(ideas_to_file)
 def remove_idea():
+    j=0
     file = open("ideas.txt", "r")
     content =file.read().split()
     file.close()
-    print(type(content))
-    for i in range(0,len(content)):
+    # print(content)
+    # print(len(content))
+    for i in range(len(content)-1):
+        # print(i)
         if i % 2 == 0:
-           content[i]=content[i] + content[i + 1]
-    print(content)
-#if arg == "'--list'":
-#    display_ideas()
-#else:
-#    idea_bank()
-remove_idea()
+            content[i] =content[i] + content[i+1]  
+    while j <= (len(content)/2):
+        j+=1
+        del content[j]
+    print(content[1])    
+    print(type(content))
+if arg == "'--list'":
+   display_ideas()
+elif arg == "'remove'":
+    print("usuwanie")
+else:
+    idea_bank()
