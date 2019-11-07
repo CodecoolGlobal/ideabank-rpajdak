@@ -14,7 +14,6 @@ def idea_bank():
         new_idea = input("What is your new idea?: ")
         n = len(ideas) + 1
         number = 0
-        # print(" ".join(idea_to_add))
         for x in range(0, n):
             number = str(n) + "."
         idea_to_add = number , new_idea
@@ -30,8 +29,6 @@ def remove_idea():
     file = open("ideas.txt", "r")
     content =file.read().split()
     file.close()
-    # print(content)
-    # print(len(content))
     for i in range(len(content)-1):
         # print(i)
         if i % 2 == 0:
