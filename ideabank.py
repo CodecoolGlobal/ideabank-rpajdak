@@ -1,19 +1,13 @@
-# Put your code here
 import sys
 data = sys.argv[1:]
 data = str(data)[1:][:-1]
 arg = data
-
 ideas = []
-
-
-
 def display_ideas():
     file = open("ideas.txt", "r")
     content =file.read()
     print(content)
     file.close()
-
 def idea_bank():
     i = 0
     while i == 0:
@@ -31,8 +25,17 @@ def idea_bank():
         file.write(ideas_to_file)
         file.close()
         print(ideas_to_file)
-
-if arg == "'--list'":
-    display_ideas()
-else:
-    idea_bank()
+def remove_idea():
+    file = open("ideas.txt", "r")
+    content =file.read().split()
+    file.close()
+    print(type(content))
+    for i in range(0,len(content)):
+        if i % 2 == 0:
+           content[i]=content[i] + content[i + 1]
+    print(content)
+#if arg == "'--list'":
+#    display_ideas()
+#else:
+#    idea_bank()
+remove_idea()
